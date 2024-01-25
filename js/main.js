@@ -29,6 +29,8 @@ const initSmoothScrolling = () => {
 //lenis 함수 선언
 // initSmoothScrolling();
 
+
+
 //---------------------------------------------
 
 //페이지 초기값
@@ -795,7 +797,7 @@ function pagecommon(pageIndex) {
   //page2 함수안에 pagecommon호출 idx넘겨받음
   $(window).scroll(function () {
     let scrollTop = $(window).scrollTop();
-    console.log(pageIndex);
+    // console.log(pageIndex);
 
     function topMenuScroll(scroll) {
       if (scroll > last_scroll) {
@@ -1192,24 +1194,6 @@ function Aboutme(idx) {
   }
   p3containerGsap();
 
-  /*  $(document).ready(function() {
-    // Select all li elements within the .visible ul
-   
-
-    // Randomly move each li element
-    $lis.each(function() {
-        gsap.to($(this), {
-            x: Math.random() * window.innerWidth - window.innerWidth / 2,
-            y: Math.random() * window.innerHeight - window.innerHeight / 2,
-        },);
-    });
-});
- */
-
-
-
-
-
   $(window).scroll(function () {
     let scrollTop3 = $(window).scrollTop();
     let p3centeroffTop = $(".page3_2container .center").offset().top;
@@ -1233,156 +1217,6 @@ function Aboutme(idx) {
         duration: 0,
       });
     }
-
-
-    //page3Fixed 높이에따른 gsap함수
-    /*   if (p6BottomFixedMoveVH > -10 && p6BottomFixedMoveVH < 100) {
-        if (p6BottomFixedMoveVH >= 0 && p6BottomFixedMoveVH < 25) {
-          gsap.to(".p6imgBox", {
-            width: "0%",
-          });
-          gsap.to(".p6BFCont1", {
-            x: 30,
-            opacity: 1,
-          });
-        } else if (p6BottomFixedMoveVH >= 25 && p6BottomFixedMoveVH < 50) {
-          gsap.to(".p6imgBox", {
-            width: "25%",
-          });
-          gsap.to(".p6BFCont2", {
-            x: 30,
-            opacity: 1,
-          });
-        } else if (p6BottomFixedMoveVH >= 60 && p6BottomFixedMoveVH < 75) {
-          gsap.to(".p6imgBox", {
-            width: "50%",
-          });
-        } else if (p6BottomFixedMoveVH >= 75 && p6BottomFixedMoveVH < 100) {
-          gsap.to(".p6imgBox", {
-            width: "75%",
-          });
-          gsap.to(".p6BFCont3", {
-            x: 30,
-            opacity: 1,
-          });
-          gsap.to(".p6BFMaintitle", {
-            x: 30,
-            opacity: 1,
-          });
-          gsap.to(".p6BFsubtitle", {
-            x: 30,
-            opacity: 1,
-          });
-        }
-        if (p6BottomFixedMoveVH < 0) {
-          gsap.to(".p6BFCont1", {
-            x: 0,
-            opacity: 0,
-            duration: 0.0001,
-          });
-          gsap.to(".p6BFCont2", {
-            x: 0,
-            opacity: 0,
-            duration: 0.0001,
-          });
-          gsap.to(".p6BFCont3", {
-            x: 0,
-            opacity: 0,
-            duration: 0.0001,
-          });
-          gsap.to(".p6BFMaintitle", {
-            x: 0,
-            opacity: 0,
-            duration: 0.0001,
-          });
-          gsap.to(".p6BFsubtitle", {
-            x: 0,
-            opacity: 0,
-            duration: 0.0001,
-          });
-          page6Gsap = 0;
-        }
-
-        if (p6BottomFixedMoveVH > 99 && page6Gsap == 0) {
-          page6Gsap = 1;
-          gsap.fromTo(
-            ".p6BFLeftTL-line",
-            {
-              opacity: 0,
-              top: "-5%",
-              left: "-5%",
-              width: "10vw",
-              height: "10vw",
-            },
-            {
-              opacity: 1,
-              top: "0%",
-              left: "0%",
-              width: "5vw",
-              height: "5vw",
-              duration: 1.5,
-              ease: "power4.out",
-            }
-          );
-          gsap.fromTo(
-            ".p6BFLeftTR-line",
-            {
-              opacity: 0,
-              top: "-5%",
-              right: "-5%",
-              width: "10vw",
-              height: "10vw",
-            },
-            {
-              opacity: 1,
-              top: "0%",
-              right: "0%",
-              width: "5vw",
-              height: "5vw",
-              duration: 1.5,
-              ease: "power4.out",
-            }
-          );
-          gsap.fromTo(
-            ".p6BFLeftBL-line",
-            {
-              opacity: 0,
-              bottom: "-5%",
-              left: "-5%",
-              width: "10vw",
-              height: "10vw",
-            },
-            {
-              opacity: 1,
-              bottom: "0%",
-              left: "0%",
-              width: "5vw",
-              height: "5vw",
-              duration: 1.5,
-              ease: "power4.out",
-            }
-          );
-          gsap.fromTo(
-            ".p6BFLeftBR-line",
-            {
-              opacity: 0,
-              bottom: "-5%",
-              right: "-5%",
-              width: "10vw",
-              height: "10vw",
-            },
-            {
-              opacity: 1,
-              bottom: "0%",
-              right: "0%",
-              width: "5vw",
-              height: "5vw",
-              duration: 1.5,
-              ease: "power4.out",
-            }
-          );
-        }
-      } */
 
   });
 
@@ -1517,6 +1351,8 @@ function Skills(idx) {
 
 function Projects(idx) {
 
+
+
   //중복 재생되는 scrollTrigger 중지후 다시재생
   ScrollTrigger.getAll().forEach((trigger) => {
     trigger.kill();
@@ -1594,6 +1430,9 @@ function Projects(idx) {
     p5projectContianerGsap1(".pcList9", "70%", "60%", 9, "10%", "100%");
 
     let p5Bottomcontainerwidth = $(".p5Bottomcontainer div").width() * 8.9;
+    $(window).resize(function() {
+      p5Bottomcontainerwidth = $(".p5Bottomcontainer div").width() * 8.9;
+     });
 
     gsap.to(".p5Bottomcontainer", {
       x: -p5Bottomcontainerwidth,
