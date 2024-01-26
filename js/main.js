@@ -52,6 +52,7 @@ let page6Gsap = 0;
 const translateValues = {};
 let pageslectCheck = 0;
 let executed = false;
+let page5click = 0;
 
 //selector span으로 감싸기
 function createSpan(selector) {
@@ -1062,6 +1063,7 @@ function pageCommonGsap(index) {
       ease: "power2.out",
     }
   );
+  
   tmtl.fromTo(
     pageLettercircle, {
       opacity: 1,
@@ -1094,6 +1096,14 @@ function pageCommonGsap(index) {
       ease: "power2.out",
     },
     "+=0.5"
+  );
+  tmtl.fromTo(
+    ".wrap_3d", {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      ease: "power2.out",
+    },"<"
   );
 }
 
@@ -1404,8 +1414,8 @@ function Projects(idx) {
       borderRadius: 0,
       scrollTrigger: {
         trigger: ".page5_2container .top",
-        start: "top top-=20%",
-        end: "bottom top+=10%",
+        start: "top top-=80%",
+        end: "bottom top+=30%",
         scrub: true,
       },
     });
@@ -1484,6 +1494,9 @@ function Projects(idx) {
 
 
   //page5 project click시 translateY효과
+
+ if(page5click == 0){
+  page5click = 1;
   $(".project").click(function () {
     let index = $(this).index();
     let targetImg = $(this).find("img");
@@ -1503,6 +1516,8 @@ function Projects(idx) {
       transform: "translateY(" + -translateValues[index] + "px)",
     });
   });
+ }
+  
 }
 
 function Contact(idx) {
@@ -1749,6 +1764,7 @@ function Contact(idx) {
 } /* Contact */
 
 
+// page3~6 수정용 - main-intro display.page3~6 dispaly 수정필요
 // Aboutme(0);
 // Skills(1);
 // Projects(2);
