@@ -187,25 +187,25 @@ function page1() {
     p1tl.to(p1intdesc1span, {
       opacity: 1,
       y: -15,
-      stagger: 0.02,
+      stagger: 0.018,
       ease: "power4.out",
     });
     p1tl.to(p1intdesc2span, {
       opacity: 1,
       y: -15,
-      stagger: 0.02,
+      stagger: 0.018,
       ease: "power4.out",
     });
     p1tl.to(p1intdesc3span, {
       opacity: 1,
       y: -15,
-      stagger: 0.02,
+      stagger: 0.018,
       ease: "power4.out",
     });
     p1tl.to(p1intdesc4span, {
       opacity: 1,
       y: -15,
-      stagger: 0.02,
+      stagger: 0.018,
       ease: "power4.out",
     });
 
@@ -216,7 +216,7 @@ function page1() {
     });
     p1tl.to(".page1LodingBar .activeBar", {
       width: "110%",
-      duration: 4,
+      duration: 1.5,
       ease: "power4.out",
     });
 
@@ -275,7 +275,7 @@ function page1() {
       y: "50%",
       width: "200vw",
       height: "200vw",
-      duration: 3,
+      duration: 2.5,
       ease: "power2.out",
       onComplete: function () {
         $(".main-intro").addClass("page1End");
@@ -469,17 +469,20 @@ function page2() {
     p2tl3 = gsap.timeline();
 
     p2tl3.to(".lc_hiddnTxt", {
+      duration:0.2,
       opacity: 0,
       y: -20,
     });
     p2tl3.to(
       ".lc_click", {
+        duration:0.2,
         opacity: 0,
         x: -20,
       },
       "<"
     );
     p2tl3.to(selectlcBox, {
+      duration:0.2,
       opacity: 0,
       width: "0%",
     });
@@ -490,7 +493,8 @@ function page2() {
       "<"
     );
     p2tl3.to(selectlcBox, {
-      delay: 0.5,
+      delay: 0.1,
+      duration:0.2,
       left: "50%",
       top: "50%",
       x: -180,
@@ -503,12 +507,15 @@ function page2() {
       zIndex: 1500,
     });
     p2tl3.to(selectlcBox, {
-      delay: 0.5,
+      delay: 0.1,
+      duration:0.2,
       oncomplete: function () {
         p2tl3.to(selectlcBox, {
+          duration:0.2,
           opacity: 1,
         });
         p2tl3.to(selectlcBox, {
+          duration:0.2,
           x: -120,
           y: -120,
           width: 240,
@@ -520,7 +527,7 @@ function page2() {
           y: "-50%",
           width: "200vw",
           height: "200vw",
-          duration: 3,
+          duration: 2,
           ease: "power2.out",
           oncomplete: function () {
             //page전환 settime함수
@@ -587,7 +594,7 @@ function page2() {
       left: "5%",
       width: "10vw",
       height: "10vw",
-      duration: 1.5,
+      duration: 1,
       ease: "power4.out",
     });
     p2tl.to(
@@ -597,7 +604,7 @@ function page2() {
         right: "5%",
         width: "10vw",
         height: "10vw",
-        duration: 1.5,
+        duration: 1,
         ease: "power4.out",
       },
       "<"
@@ -609,7 +616,7 @@ function page2() {
         left: "5%",
         width: "10vw",
         height: "10vw",
-        duration: 1.5,
+        duration: 1,
         ease: "power4.out",
       },
       "<"
@@ -621,17 +628,19 @@ function page2() {
         right: "5%",
         width: "10vw",
         height: "10vw",
-        duration: 1.5,
+        duration: 1,
         ease: "power4.out",
       },
       "<"
     );
     p2tl.to(".page2mainTitle", {
+      duration:0.3,
       x: 20,
       opacity: 1,
     });
     p2tl.to(
       ".page2subTitle ul li", {
+        duration:0.3,
         x: -20,
         opacity: 1,
         stagger: 0.2,
@@ -639,18 +648,21 @@ function page2() {
       "<"
     );
     p2tl.to(".page2Cont .leftCont .lc_box", {
+      duration:0.3,
       top: 0,
       opacity: 1,
       stagger: 0.2,
     });
     p2tl.to(
       ".page2Cont .rightCont", {
+        duration:0.3,
         left: 0,
         opacity: 1,
       },
       "<"
     );
     p2tl.to(".page2 .page2Marquee .page2marqueeContainer", {
+      duration:0.3,
       opacity: 1,
     });
   }
@@ -672,7 +684,7 @@ function page2() {
       left: "0%",
       width: "15vw",
       height: "15vw",
-      duration: 1.5,
+      duration: 1,
       ease: "power4.out",
     });
     p2tl2.to(
@@ -682,7 +694,7 @@ function page2() {
         right: "0%",
         width: "15vw",
         height: "15vw",
-        duration: 1.5,
+        duration: 1,
         ease: "power4.out",
       },
       "<"
@@ -694,7 +706,7 @@ function page2() {
         left: "0%",
         width: "15vw",
         height: "15vw",
-        duration: 1.5,
+        duration: 1,
         ease: "power4.out",
       },
       "<"
@@ -706,7 +718,7 @@ function page2() {
         right: "0%",
         width: "15vw",
         height: "15vw",
-        duration: 1.5,
+        duration: 1,
         ease: "power4.out",
         oncomplete: function () {
           $(".page2").addClass("selectPage");
@@ -716,12 +728,14 @@ function page2() {
     );
 
     p2tl2.to(".page2Title .page2mainTitle", {
+      duration:0.3,
       x: "-30%",
       y: "-35%",
-      fontSize: 40,
+      fontSize: 50,
     });
     p2tl2.to(
       ".page2Title .page2subTitle", {
+        duration:0.3,
         x: "16%",
         y: "-210%",
       },
@@ -729,7 +743,8 @@ function page2() {
     );
     p2tl2.to(
       ".page2 .page2Title .page2subTitle ul li", {
-        fontSize: 20,
+        duration:0.3,
+        fontSize: 30,
       },
       "<"
     );
@@ -739,11 +754,13 @@ function page2() {
       "z-index": "100",
     });
     p2tl2.to(lcBox.eq(0), {
+      duration:0.3,
       opacity: 0,
       left: "50%",
     });
     p2tl2.to(
       lcBox.eq(1), {
+        duration:0.3,
         opacity: 0,
         left: "25%",
       },
@@ -751,18 +768,21 @@ function page2() {
     );
     p2tl2.to(
       lcBox.eq(2), {
+        duration:0.3,
         opacity: 0,
       },
       "<"
     );
     p2tl2.to(
       lcBox.eq(3), {
+        duration:0.3,
         opacity: 0,
         right: "25%",
       },
       "<"
     );
     p2tl2.to(lcBox.eq(element), {
+      duration:0.3,
       opacity: 1,
       oncomplete: function () {
         lcBox.eq(element).addClass("start");
@@ -908,19 +928,23 @@ function pagecommon(pageIndex) {
           .eq(pageIndex)
           .find(".pageListColor ul li .dot");
         pctl.to(selectpageListDot.eq(index), {
+          duration:0.2,
           width: 100,
           height: 100,
           zIndex: 100,
         });
         pctl.to(selectpageListDot.eq(index), {
+          duration:0.2,
           y: -200,
           oncomplete: function () {
             pctl.to(selectpageListDot.eq(index), {
-              delay: 0.5,
+              delay: 0.1,
+              duration:0.2,
               position: "fixed",
               left: "50%",
             });
             pctl.to(selectpageListDot.eq(index), {
+              duration:0.2,
               y: 100,
             });
             pctl.to(selectpageListDot.eq(index), {
@@ -933,7 +957,7 @@ function pagecommon(pageIndex) {
               selectpageListDot.eq(index), {
                 oncomplete: selectPageComplete,
               },
-              "+=0.5"
+              "-=0.2"
             );
           },
         });
@@ -1017,6 +1041,7 @@ function pageCommonGsap(index) {
       opacity: 0,
       y: -100,
     }, {
+      duration:0.2,
       opacity: 1,
       y: 0,
       ease: "power2.out",
@@ -1028,6 +1053,7 @@ function pageCommonGsap(index) {
       x: -50,
     }, {
       opacity: 1,
+      duration:0.2,
       x: 0,
       ease: "power2.out",
     }
@@ -1037,6 +1063,7 @@ function pageCommonGsap(index) {
       opacity: 0,
       y: -20,
     }, {
+      duration:0.2,
       opacity: 1,
       y: 0,
       ease: "power2.out",
@@ -1047,6 +1074,7 @@ function pageCommonGsap(index) {
     pageTopPageColor, {
       opacity: 0,
     }, {
+      duration:0.2,
       opacity: 1,
       ease: "power2.out",
       stagger: 0.1,
@@ -1058,6 +1086,7 @@ function pageCommonGsap(index) {
       opacity: 0,
       y: 100,
     }, {
+      duration:0.2,
       opacity: 1,
       y: 0,
       ease: "power2.out",
@@ -1070,18 +1099,20 @@ function pageCommonGsap(index) {
       x: 0,
       y: 0,
     }, {
+      duration:0.2,
       opacity: 0,
       y: -30,
       x: -30,
       duration: 1,
       ease: "power2.out",
     },
-    "+=0.5"
+    "+=0.3"
   );
   tmtl.fromTo(
     pageLettertop, {
       rotateX: 0,
     }, {
+      duration:0.2,
       rotateX: 90,
       duration: 1,
       ease: "power2.out",
@@ -1091,16 +1122,18 @@ function pageCommonGsap(index) {
     pageLetterCont, {
       y: 0,
     }, {
+      duration:0.2,
       y: -200,
       duration: 1,
       ease: "power2.out",
     },
-    "+=0.5"
+    "+=0.3"
   );
   tmtl.fromTo(
     ".wrap_3d", {
       opacity: 0,
     }, {
+      duration:0.2,
       opacity: 1,
       ease: "power2.out",
     },"<"
@@ -1518,6 +1551,18 @@ function Projects(idx) {
   });
  }
   
+ $(".project").mouseover(function(){
+    $(".p5FollowTxt").css({
+      "opacity":"1"
+    })
+ })
+ $(".project").mouseout(function(){
+    $(".p5FollowTxt").css({
+      "opacity":"0"
+    })
+ })
+
+
 }
 
 function Contact(idx) {
